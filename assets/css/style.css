@@ -49,3 +49,18 @@ button:hover {
     color: #000;
     background-color: pink;
 }
+
+.question {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.multChoice {
+    text-decoration: none;
+    color: #fff;
+    background-color: purple;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+    margin: 40px auto;
+}
