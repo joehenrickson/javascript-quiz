@@ -110,6 +110,71 @@ function startTimer(duration, display) {
 }
 
 
+// checkAnswer
+
+function checkAnswer(answer){
+    if( answer == questions[runningQuestion].correct){
+        // answer is correct
+        score++;
+        
+    }else{
+        // answer is wrong
+        timer -= 10;
+        
+    }
+    count = 0;
+    runningQuestion++;
+    if(runningQuestion < lastQuestion){
+        displayQuestion();
+    }else{
+    
+        clearInterval(timerB);
+        scoreDisplay();
+    }
+}
+
+// scoring
+function scoreDisplay(){
+    scoreDiv.style.display = "block";
+    quiz.style.display = "none";
+    clearInterval(beginning);
+    
+    const scorePerCent = Math.round(100 * score/questions.length);
+    var userName = prompt("Enter your initials for the leaderboard.");
+     
+    leaderboard = JSON.parse(localStorage.getItem("leaderboard"));
+    if (!leaderboard){
+        leaderboard = [];
+    }
+
+    leaderboard.push({name: userName, score: scorePerCent});
+
+    leaderboard.sort(function(a, b) {
+        return b.score - a.score;
+      });
+
+    for (var i = 0;i < leaderboard.length; i++){
+        var player = leaderboard[i].name + ": " + leaderboard[i].score +"%";
+
+        var li = document.createElement("li");
+        li.textContent = player;
+        leaderList.appendChild(li);
+    }
+
+    restart.addEventListener("click", function(){
+        scoreDiv.style.display = "none";
+        startQuiz();
+        quiz.style.display = "block";
+    })
+   
+    
+    localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+    
+}
+
+
+
+
 
 
   
