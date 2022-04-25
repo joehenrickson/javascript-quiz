@@ -55,6 +55,60 @@ var questions = [{
 }
 ];
 
+const lastQuestion = questions.length - 1;
+let runningQuestion = 0;
+let count = 0;
+let timerB;
+let score = 0;
+var timer;
+
+
+// display a question
+function displayQuestion(){
+    let q = questions[runningQuestion];
+    
+    question.innerHTML = "<p>"+ q.question +"</p>";
+    answerA.innerHTML = q.answerA;
+    answerB.innerHTML = q.answerB;
+    answerC.innerHTML = q.answerC;
+    answerD.innerHTML = q.answerD;
+}
+
+start.addEventListener("click",startQuiz);
+
+// start quiz
+function startQuiz(){
+    start.style.display = "none";
+    runningQuestion = 0;
+    count = 0;
+    score = 0;
+    displayQuestion();
+    quiz.style.display = "block";
+    
+
+    
+    startTimer(60, display);
+}
+
+// timer 
+function startTimer(duration, display) {
+    timer = duration;
+    var seconds;
+
+    beginning = setInterval(function () {
+        seconds = parseInt(timer % 60, 10);
+
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = seconds;
+
+        if (--timer <= 0) {
+            clearInterval(beginning);
+            timer = duration;
+        }
+    }, 1000);
+}
+
 
 
 
