@@ -2,29 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz Challenge</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="topbar">
-        <a href="#">View high scores</a>
-        <p value="0" max="60" id="timer">Time:</p>
-    </div>
-    <main id="remove">
-        <h1>Coding Quiz Challenge</h1>
-        <p>To answer the following code-related questions
-        within the time limit.  Keep in mind that incorrect 
-        answers will penalize your score/time by ten seconds.
-        </p>
-        <div class="button">
-        <button id="pull">Start Quiz</button>
+    <div id="container">
+        <h1>Answer the questions as they appear.  Be careful, a missed question will cost you time on the clock!</h1>
+        <button id="start">Start Quiz!</button>
+        <div id="quiz" style="display: none">
+            <div><span id="time">00:60</span></div>
+            <div id="question"></div>
+            <div id="choices">
+                <button class="answer" id="A" onclick="checkAnswer('A')"></button>
+                <button class="answer" id="B" onclick="checkAnswer('B')"></button>
+                <button class="answer" id="C" onclick="checkAnswer('C')"></button>
+                <button class="answer" id="D" onclick="checkAnswer('D')"></button>
+            </div>
         </div>
-    </main>
-
-
-
+        <div id="scoreContainer" style="display: none">Leaderboard!
+            <ul id="leaderboards"></ul>
+            <div id="restart">Click Here To Restart</div>
+        </div>
+    </div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
