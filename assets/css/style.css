@@ -1,0 +1,108 @@
+#container {
+  margin: 100px auto;
+  background-color: white;
+  height: 400px;
+  width: 700px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px 0px;
+  top: 100px;
+}
+h1 {
+  padding: 50px 50px 10px 50px;
+  text-align: center;
+}
+h2 {
+  padding: 10px 50px 50px 50px;
+}
+#start {
+  margin: 0 0 0 50px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: purple;
+  color: white;
+}
+#start:hover {
+  color: #000;
+}
+#question {
+}
+#question p {
+  margin: 0 auto;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+}
+
+#choices {
+  padding: 5px;
+}
+.answer {
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  margin: 10px 0 0 50px;
+  background-color: purple;
+  color: white;
+}
+.answer:hover {
+  color: #000;
+}
+
+#scoreContainer {
+  margin: 20px auto;
+  background-color: white;
+  height: auto;
+  width: 700px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px 0px;
+  display: none;
+  text-align: left;
+  font-weight: bold;
+  padding-top: 30px;
+  color: #000;
+}
+#highScores {
+  margin: 0 0 0 20px;
+}
+#scoreContainer p {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+ul {
+  text-align: center;
+  list-style-position: inside;
+}
+#scoreContainer .li {
+  text-decoration: none;
+}
+#restart {
+  display: inline-block;
+  width: 135px;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: purple;
+  color: white;
+  margin: 20px;
+}
+#restart:hover {
+  color: #000;
+}
+#time {
+  top: 20px;
+  right: 20px;
+}

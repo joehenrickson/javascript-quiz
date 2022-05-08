@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Quiz</title>
+    <title>Javascript Quiz</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div><span id="time">Timer: 60</span></div>
     <div id="container">
-        <h1>Answer the questions as they appear.  Be careful, a missed question will cost you time on the clock!</h1>
-        <button id="start">Start Quiz!</button>
+        <h1 id="title">Javascript Quiz</h1>
+        <h2 id="description">Answer the questions as they appear.  Be careful, a missed question will cost you time on the clock!</h2>
+        <button id="start">Start Quiz</button>
         <div id="quiz" style="display: none">
-            <div><span id="time">00:60</span></div>
+            
             <div id="question"></div>
             <div id="choices">
-                <button class="answer" id="A" onclick="checkAnswer('A')"></button>
-                <button class="answer" id="B" onclick="checkAnswer('B')"></button>
-                <button class="answer" id="C" onclick="checkAnswer('C')"></button>
-                <button class="answer" id="D" onclick="checkAnswer('D')"></button>
+                <button class="answer" id="A" onclick="checkAnswer('A')"></button></br>
+                <button class="answer" id="B" onclick="checkAnswer('B')"></button></br>
+                <button class="answer" id="C" onclick="checkAnswer('C')"></button></br>
+                <button class="answer" id="D" onclick="checkAnswer('D')"></button></br>
             </div>
         </div>
-        <div id="scoreContainer" style="display: none">Leaderboard!
+        <div id="scoreContainer" style="display: none">
+            <h1 id="highScores">High Scores</h1>
             <ul id="leaderboards"></ul>
             <div id="restart">Click Here To Restart</div>
         </div>
