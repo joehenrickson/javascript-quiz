@@ -17,3 +17,6 @@ After completing the quiz, your score will be based on how many questions were a
 Type in your initials and see where you stand on the leaderboard!
 
 ![image](https://user-images.githubusercontent.com/3991446/167281411-e242e259-4f7b-4355-844c-65b7885e758a.png)
+
+My Github Repository: https://github.com/joehenrickson/javascript-quiz
+
